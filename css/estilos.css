@@ -7,8 +7,10 @@
 
 body {
     background-image: url('https://www.freevector.com/uploads/vector/preview/30348/Minimal_Dynamic_Background.jpg');
-    background-size: auto 100vh;
-    height: 100vh;
+    background-size: auto 100vw;
+    height: 100vw;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 12px;
   }
 
 /* se a tela tiver pelo menos carregamos estes estilos*/
@@ -31,10 +33,12 @@ header{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+
 }
 
 .menu {
   background-color: white;
+  font-size: 1.5em;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -50,26 +54,117 @@ header{
 }
   
 .menu a {
-  color: teal;
   display: block;
-  padding: 10px;
+  padding: 10px 20px;
+  transition: background-color 1s, color 0.2s;
+}
+
+.menu a:active,
+.menu a:hover {
+  background-color: teal;
+  color: white;
+}
+
+a {
+  color: teal;
   text-decoration: none;
 }
-  
+
+a:hover {
+  text-decoration: underline;
+}
+
+.titulo {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo{
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
 .site-title {
   color: whitesmoke;
+  font-size: 4em;
+  font-family: 'Balsamiq Sans', cursive;
   text-align: center;
 }
 
 .site-subtitle {
   color: silver;
   font-style: italic;
+  font-family: 'Varela Round', sans-serif;
   font-weight: lighter;
+  line-height: 0.8em;
   text-align: center;
   font-size: 2em;
 }
 
+.contato,
+.portfolio {
+  padding: 2em;
+}
+
+.contato,
+.portfolio h2 {
+  color: whitesmoke;
+  font-family: 'Varela Round', sans-serif;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.portfolio .grid {
+  display: grid;
+  justify-content: center;
+  gap: 2em;
+}
+
+@media (min-width: 620px){
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 880px){
+  .portfolio .grid {
+    align-content: center;
+    height: calc(100vh - 8em -48px);
+    grid-template-columns: repeat(3, 340px);
+    justify-content: center;
+  }
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
 .img-portfolio {
   height: 180px;
-  width: 180px;
+  width: 240px;
+  object-fit: cover;
+  border-radius: 20px;
+  object-position: center;
+  transition: transform 500ms;
+}
+
+.img-portfolio:hover{
+  transform: scale(1.2);
+}
+
+.contato a {
+  color: whitesmoke;
+  font-size: 5em;
+  text-decoration: none;
+  transition: text-shadow 0.5s;
+}
+
+.contato a:active,
+.contato a:hover{
+  text-decoration: none;
+  text-shadow: 0px 0px 10px white;
 }

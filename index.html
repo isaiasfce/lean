@@ -5,39 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isaias</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Roboto&family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4016b292c6.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <nav class = "menu">
           <ul>
-            <li><a href = "#">Sobre</a></li>
-            <li><a href = "#">Portifólio</a></li>
-            <li><a href = "#">Contato</a></li>
+            <li><a href = "#sobres">Sobre</a></li>
+            <li><a href = "#portfolio">Imagens Aleatórias</a></li>
+            <li><a href = "#contato">Contato</a></li>
           </ul>
         </nav>
-        <div>
+        <div class="titulo">
           <h1 class = "site-title">Isaias Amaral</li>
           <h2 class = "site-subtitle">Estou aqui</h2>
         </div> 
     </header>
-    <section>
-      <h2>Portfólio</h2>
-      <figure>
-        <img class="img-portfolio" src="./img/4.jpg" alt="Cantos">
-        <figcaption>Cantos</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/42.jpg" alt="Floyd">
-        <figcaption>Floyd</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/61.jpg" alt="Monstro">
-        <figcaption>Monstro</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/261.jpg" alt="BlackCat">
-        <figcaption>Gato preto</figcaption>
-      </figure>
+    <section class="portfolio" id="portfolio">
+      <h2>Imagens Aleatórias</h2>
+      <div class="grid">
+        <figure>
+          <img class="img-portfolio" src="./img/4.jpg" alt="Cantos">
+          <figcaption>Cantos</figcaption>
+        </figure>
+        <figure>
+          <img class="img-portfolio" src="./img/42.jpg" alt="Floyd">
+          <figcaption>Floyd</figcaption>
+        </figure>
+        <figure>
+          <img class="img-portfolio" src="./img/61.jpg" alt="Monstro">
+          <figcaption>Monstro</figcaption>
+        </figure>
+        <figure>
+          <img class="img-portfolio" src="./img/261.jpg" alt="BlackCat">
+          <figcaption>Gato preto</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="contato" id="contato">
+      <h2>Contato</h2>
+      <div class="grid icons">
+        <a target="_blank" href="https://isaiasfce.github.io/lean/">
+          <i class="fab fa-github"></i>
+        </a>
+        <a target="_blank" href="https://twitter.com/pointwo">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="isaiasfce@gmail.com">
+          <i class="fas fa-envelope-open"></i>
+        </a>
+      </div>
     </section>
 </body>
 </html>
